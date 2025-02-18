@@ -1,0 +1,8 @@
+{application, scxml, [
+    {description, "SCXML Engine for BEAM"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {applications, [kernel, stdlib]},
+    {env, []},
+    {modules, []}
+ ]}.
