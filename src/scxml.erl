@@ -30,9 +30,6 @@ load(File) ->
         Other -> Other
     end.
 
-a() ->
-    {state, "demo", "work", [], [], [], [{state, "Final_2", undefined, [{log, "final log onentry"}], [{log, "final log onexit"}], [], [], true}, {state, "work", undefined, [{send, "t1", "timer", undefined, 1000}, {send, "t2", "stop", undefined, 3000}], [], [{transition, "stop", undefined, "Final_2", "external", [{log, "transition log"}]}, {transition, "timer", undefined, undefined, "internal", [{log, "timer"}, {send, undefined, "timer", undefined, 1000}]}], [], false}], false}.
-
 %%%===================================================================
 %%% Internal functions
 %%%===================================================================
