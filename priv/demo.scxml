@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" name="demo" initial="work">
+    <state id="work">
+        <onentry>
+            <send event="timer" delay="1000" id="t1"/>
+            <send event="stop" delay="3000" id="t2"/>
+        </onentry>
+        <transition type="internal" event="timer">
+            <send event="timer" delay="1000"/>
+            <log label="timer"/>
+        </transition>
+        <transition type="external" target="Final_2" event="stop">
+            <log label="transition log"/>
+        </transition>
+    </state>
+    <final id="Final_2">
+        <onentry>
+            <log label="final log onentry"/>
+        </onentry>
+        <onexit>
+            <log label="final log onexit"/>
+        </onexit>
+    </final>
+</scxml>
